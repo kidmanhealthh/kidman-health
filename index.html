@@ -858,6 +858,80 @@
       margin-top: 10px;
     }
 
+    .enquiry-type-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .enquiry-option {
+      cursor: pointer;
+    }
+
+    .enquiry-option input {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+    }
+
+    .enquiry-option span {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fbfbfa;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all 0.2s ease;
+    }
+
+    .enquiry-option input:checked + span {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+      color: white;
+    }
+
+    .enquiry-option input:focus-visible + span {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+
+    .field-group {
+      padding-top: 4px;
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+
+    .field-group:first-of-type {
+      border-top: none;
+      margin-top: 4px;
+    }
+
+    .form-checkbox label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .form-checkbox input {
+      margin-top: 3px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .form-note-privacy {
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
     /* =========================================================
        FOOTER
     ========================================================= */
@@ -2037,6 +2111,34 @@
 
           <form id="contactForm">
 
+            <div class="form-group">
+
+              <label>
+                What can we help with?
+              </label>
+
+              <div class="enquiry-type-selector">
+
+                <label class="enquiry-option">
+                  <input type="radio" name="enquiryType" value="general" checked>
+                  <span>General Enquiry</span>
+                </label>
+
+                <label class="enquiry-option">
+                  <input type="radio" name="enquiryType" value="home">
+                  <span>Book a Home Appointment</span>
+                </label>
+
+                <label class="enquiry-option">
+                  <input type="radio" name="enquiryType" value="provider">
+                  <span>Care Provider Referral</span>
+                </label>
+
+              </div>
+
+            </div>
+
+
             <div class="form-row">
 
               <div class="form-group">
@@ -2091,42 +2193,333 @@
             </div>
 
 
-            <div class="form-group">
+            <!-- ===============================================
+                 GENERAL ENQUIRY
+            ================================================ -->
 
-              <label for="enquiry">
-                Enquiry type
-              </label>
+            <div class="field-group" data-branch="general">
 
-              <select id="enquiry" name="enquiry">
+              <div class="form-group">
 
-                <option value="Home appointment">
-                  Home appointment
-                </option>
+                <label for="generalMessage">
+                  Message
+                </label>
 
-                <option value="Care provider referral">
-                  Care provider referral
-                </option>
+                <textarea
+                  id="generalMessage"
+                  name="generalMessage"
+                  placeholder="Tell me a little about what you are looking for..."
+                ></textarea>
 
-                <option value="General enquiry">
-                  General enquiry
-                </option>
-
-              </select>
+              </div>
 
             </div>
 
 
-            <div class="form-group">
+            <!-- ===============================================
+                 HOME APPOINTMENT BOOKING
+            ================================================ -->
 
-              <label for="message">
-                Message
-              </label>
+            <div class="field-group" data-branch="home" hidden>
 
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Tell me a little about what you are looking for..."
-              ></textarea>
+              <div class="form-row">
+
+                <div class="form-group">
+
+                  <label for="homeSuburb">
+                    Suburb
+                  </label>
+
+                  <input
+                    type="text"
+                    id="homeSuburb"
+                    name="homeSuburb"
+                    placeholder="e.g. Thornbury"
+                  >
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="homePreferredTime">
+                    Preferred day/time
+                  </label>
+
+                  <input
+                    type="text"
+                    id="homePreferredTime"
+                    name="homePreferredTime"
+                    placeholder="e.g. Tuesday mornings"
+                  >
+
+                </div>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="homeReason">
+                  What's this appointment for?
+                </label>
+
+                <select id="homeReason" name="homeReason">
+
+                  <option value="General relaxation / wellbeing">
+                    General relaxation / wellbeing
+                  </option>
+
+                  <option value="Chronic pain or tension">
+                    Chronic pain or tension
+                  </option>
+
+                  <option value="Recovering from an injury">
+                    Recovering from an injury
+                  </option>
+
+                  <option value="Mobility / movement support">
+                    Mobility / movement support
+                  </option>
+
+                  <option value="Not sure - happy to discuss">
+                    Not sure – happy to discuss
+                  </option>
+
+                </select>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="homeHealthNotes">
+                  Any injuries or health conditions I should know about?
+                </label>
+
+                <textarea
+                  id="homeHealthNotes"
+                  name="homeHealthNotes"
+                  placeholder="Optional, but it helps me prepare for your session"
+                ></textarea>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="homeHeard">
+                  How did you hear about Kidman Health?
+                </label>
+
+                <select id="homeHeard" name="homeHeard">
+
+                  <option value="Google search">Google search</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Referral from friend/family">Referral from friend/family</option>
+                  <option value="Flyer or poster">Flyer or poster</option>
+                  <option value="GP or health professional">GP or health professional</option>
+                  <option value="Aged care provider">Aged care provider</option>
+                  <option value="Other">Other</option>
+
+                </select>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="homeMessage">
+                  Anything else?
+                </label>
+
+                <textarea
+                  id="homeMessage"
+                  name="homeMessage"
+                  placeholder="Any other details or questions"
+                ></textarea>
+
+              </div>
+
+            </div>
+
+
+            <!-- ===============================================
+                 CARE PROVIDER REFERRAL
+            ================================================ -->
+
+            <div class="field-group" data-branch="provider" hidden>
+
+              <div class="form-row">
+
+                <div class="form-group">
+
+                  <label for="providerOrg">
+                    Organisation name
+                  </label>
+
+                  <input
+                    type="text"
+                    id="providerOrg"
+                    name="providerOrg"
+                    placeholder="e.g. Uniting AgeWell"
+                  >
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="providerRole">
+                    Your role
+                  </label>
+
+                  <input
+                    type="text"
+                    id="providerRole"
+                    name="providerRole"
+                    placeholder="e.g. Care Coordinator"
+                  >
+
+                </div>
+
+              </div>
+
+              <div class="form-row">
+
+                <div class="form-group">
+
+                  <label for="clientName">
+                    Client name
+                  </label>
+
+                  <input
+                    type="text"
+                    id="clientName"
+                    name="clientName"
+                    placeholder="Client's full name"
+                  >
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="clientSuburb">
+                    Client suburb
+                  </label>
+
+                  <input
+                    type="text"
+                    id="clientSuburb"
+                    name="clientSuburb"
+                    placeholder="e.g. Preston"
+                  >
+
+                </div>
+
+              </div>
+
+              <div class="form-row">
+
+                <div class="form-group">
+
+                  <label for="fundingStream">
+                    Funding stream
+                  </label>
+
+                  <select id="fundingStream" name="fundingStream">
+
+                    <option value="Support at Home">Support at Home</option>
+                    <option value="CHSP">Commonwealth Home Support Programme (CHSP)</option>
+                    <option value="Private / self-funded">Private / self-funded</option>
+                    <option value="Not sure">Not sure</option>
+
+                  </select>
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="visitFrequency">
+                    Preferred visit frequency
+                  </label>
+
+                  <select id="visitFrequency" name="visitFrequency">
+
+                    <option value="Clinician directed">Clinician directed</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Fortnightly">Fortnightly</option>
+                    <option value="Single assessment">Single assessment</option>
+
+                  </select>
+
+                </div>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="referralReason">
+                  Reason for referral
+                </label>
+
+                <textarea
+                  id="referralReason"
+                  name="referralReason"
+                  placeholder="e.g. pain management, mobility support, general condition maintenance"
+                ></textarea>
+
+              </div>
+
+              <div class="form-row">
+
+                <div class="form-group">
+
+                  <label for="preferredStartDate">
+                    Preferred start date
+                  </label>
+
+                  <input
+                    type="date"
+                    id="preferredStartDate"
+                    name="preferredStartDate"
+                  >
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="accessNotes">
+                    Mobility / access notes
+                  </label>
+
+                  <input
+                    type="text"
+                    id="accessNotes"
+                    name="accessNotes"
+                    placeholder="e.g. uses a walker, stairs at entrance"
+                  >
+
+                </div>
+
+              </div>
+
+              <div class="form-group form-checkbox">
+
+                <label>
+
+                  <input
+                    type="checkbox"
+                    id="providerConsent"
+                    name="providerConsent"
+                  >
+
+                  I confirm appropriate consent is in place to share
+                  this client's details for the purpose of this referral.
+
+                </label>
+
+              </div>
+
+              <p class="form-note form-note-privacy">
+                Please avoid including detailed medical history here —
+                I'll follow up directly by phone to discuss clinical
+                details securely.
+              </p>
 
             </div>
 
@@ -2341,31 +2734,130 @@
     const BUSINESS_EMAIL = "jake@kidmanhealth.com";
 
 
+    /* -------------------------------------------------------
+       SHOW/HIDE FIELDS BASED ON ENQUIRY TYPE
+    ------------------------------------------------------- */
+
+    const enquiryRadios =
+      document.querySelectorAll('input[name="enquiryType"]');
+
+    const fieldGroups =
+      document.querySelectorAll(".field-group");
+
+    function updateVisibleFields() {
+
+      const selected =
+        document.querySelector('input[name="enquiryType"]:checked').value;
+
+      fieldGroups.forEach(group => {
+
+        group.hidden = group.dataset.branch !== selected;
+
+      });
+
+    }
+
+    enquiryRadios.forEach(radio => {
+
+      radio.addEventListener("change", updateVisibleFields);
+
+    });
+
+    updateVisibleFields();
+
+
+    /* -------------------------------------------------------
+       BUILD AND SEND THE ENQUIRY EMAIL
+    ------------------------------------------------------- */
+
     document.getElementById("contactForm").addEventListener(
       "submit",
       function(event) {
 
         event.preventDefault();
 
-        const name =
-          document.getElementById("name").value;
+        const enquiryType =
+          document.querySelector('input[name="enquiryType"]:checked').value;
 
-        const phone =
-          document.getElementById("phone").value;
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
 
-        const email =
-          document.getElementById("email").value;
+        let enquiryLabel = "General Enquiry";
+        let details = "";
 
-        const enquiry =
-          document.getElementById("enquiry").value;
+        if (enquiryType === "general") {
 
-        const message =
-          document.getElementById("message").value;
+          enquiryLabel = "General Enquiry";
+
+          const message =
+            document.getElementById("generalMessage").value;
+
+          details =
+`Message:
+${message}`;
+
+        } else if (enquiryType === "home") {
+
+          enquiryLabel = "Home Appointment Booking";
+
+          const suburb = document.getElementById("homeSuburb").value;
+          const preferredTime = document.getElementById("homePreferredTime").value;
+          const reason = document.getElementById("homeReason").value;
+          const healthNotes = document.getElementById("homeHealthNotes").value;
+          const heardAbout = document.getElementById("homeHeard").value;
+          const message = document.getElementById("homeMessage").value;
+
+          details =
+`Suburb: ${suburb}
+Preferred day/time: ${preferredTime}
+Reason for appointment: ${reason}
+Relevant injuries/health conditions: ${healthNotes}
+How they heard about us: ${heardAbout}
+
+Additional details:
+${message}`;
+
+        } else if (enquiryType === "provider") {
+
+          enquiryLabel = "Care Provider Referral";
+
+          const org = document.getElementById("providerOrg").value;
+          const role = document.getElementById("providerRole").value;
+          const clientName = document.getElementById("clientName").value;
+          const clientSuburb = document.getElementById("clientSuburb").value;
+          const funding = document.getElementById("fundingStream").value;
+          const frequency = document.getElementById("visitFrequency").value;
+          const reason = document.getElementById("referralReason").value;
+          const startDate = document.getElementById("preferredStartDate").value;
+          const accessNotes = document.getElementById("accessNotes").value;
+          const consent =
+            document.getElementById("providerConsent").checked
+              ? "Yes"
+              : "Not confirmed";
+
+          details =
+`Organisation: ${org}
+Referrer role: ${role}
+
+Client name: ${clientName}
+Client suburb: ${clientSuburb}
+Funding stream: ${funding}
+Preferred visit frequency: ${frequency}
+Preferred start date: ${startDate}
+Mobility/access notes: ${accessNotes}
+
+Reason for referral:
+${reason}
+
+Consent to share client details confirmed: ${consent}`;
+
+        }
 
 
         const subject =
           encodeURIComponent(
-            "Kidman Health Enquiry – " + enquiry
+            "Kidman Health Enquiry – " + enquiryLabel
           );
 
 
@@ -2375,14 +2867,13 @@
 
 I have an enquiry regarding Kidman Health.
 
+Enquiry type: ${enquiryLabel}
+
 Name: ${name}
 Phone: ${phone}
 Email: ${email}
 
-Enquiry type: ${enquiry}
-
-Message:
-${message}
+${details}
 
 Thanks.`
           );
