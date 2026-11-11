@@ -1,2821 +1,1517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Kidman Health | Mobile Remedial Massage Melbourne</title>
-
-  <meta
-    name="description"
-    content="Kidman Health provides professional mobile remedial massage therapy in Melbourne, with in-home services for older adults and clients receiving home care."
-  >
-
-  <meta
-    name="keywords"
-    content="remedial massage Melbourne, mobile remedial massage, home massage Melbourne, aged care massage, Support at Home massage, remedial massage Thornbury"
-  >
-
-  <meta name="author" content="Kidman Health">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Kidman Health | Mobile Remedial Massage">
-  <meta property="og:description" content="Professional remedial massage delivered to your home across Melbourne.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kidmanhealth.com">
-
-  <link rel="canonical" href="https://kidmanhealth.com">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
-
-    /* =========================================================
-       RESET
-    ========================================================= */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
-    }
-
-    body {
-      font-family: "DM Sans", sans-serif;
-      color: #26332d;
-      background: #f8f7f3;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    button {
-      cursor: pointer;
-    }
-
-    /* =========================================================
-       VARIABLES
-    ========================================================= */
-
-    :root {
-      --green-dark: #20352d;
-      --green: #4d7564;
-      --green-light: #dfe9e3;
-      --cream: #f8f7f3;
-      --cream-dark: #eeeae1;
-      --white: #ffffff;
-      --text: #26332d;
-      --muted: #66736c;
-      --border: #dce2dd;
-      --gold: #b79a62;
-
-      --max-width: 1180px;
-      --radius: 16px;
-      --shadow: 0 12px 40px rgba(32, 53, 45, 0.08);
-    }
-
-    /* =========================================================
-       GENERAL
-    ========================================================= */
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 100px 0;
-    }
-
-    .section-small {
-      padding: 70px 0;
-    }
-
-    .section-label {
-      display: inline-block;
-      color: var(--green);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      line-height: 1.15;
-    }
-
-    h1,
-    h2 {
-      font-family: "Playfair Display", serif;
-      font-weight: 600;
-    }
-
-    h1 {
-      font-size: clamp(3rem, 6vw, 5.3rem);
-      letter-spacing: -0.035em;
-    }
-
-    h2 {
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      letter-spacing: -0.025em;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-    }
-
-    p {
-      color: var(--muted);
-    }
-
-    .lead {
-      font-size: 1.12rem;
-      line-height: 1.8;
-    }
-
-    /* =========================================================
-       BUTTONS
-    ========================================================= */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 23px;
-      border-radius: 999px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: all 0.25s ease;
-    }
-
-    .btn-primary {
-      background: var(--green-dark);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--green);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border-color: var(--green-dark);
-      color: var(--green-dark);
-    }
-
-    .btn-secondary:hover {
-      background: var(--green-dark);
-      color: white;
-    }
-
-    .btn-light {
-      background: white;
-      color: var(--green-dark);
-    }
-
-    .btn-light:hover {
-      transform: translateY(-2px);
-    }
-
-    /* =========================================================
-       NAVIGATION
-    ========================================================= */
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(248, 247, 243, 0.94);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(220, 226, 221, 0.7);
-    }
-
-    .nav {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--green-dark);
-    }
-
-    .logo span {
-      display: block;
-      font-size: 0.58rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-top: -3px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .nav-links a {
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--green);
-    }
-
-    .nav-cta {
-      padding: 10px 17px;
-      background: var(--green-dark);
-      color: white !important;
-      border-radius: 999px;
-    }
-
-    .mobile-menu {
-      display: none;
-      border: none;
-      background: none;
-      font-size: 1.7rem;
-      color: var(--green-dark);
-    }
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-    .hero {
-      min-height: 100vh;
-      padding-top: 76px;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(
-          circle at 80% 30%,
-          rgba(223, 233, 227, 0.9),
-          transparent 35%
-        ),
-        var(--cream);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      max-width: 750px;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 em {
-      color: var(--green);
-      font-style: normal;
-    }
-
-    .hero-text {
-      max-width: 620px;
-      margin-bottom: 32px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .hero-image {
-      min-height: 570px;
-      border-radius: 160px 160px 24px 24px;
-      background:
-        linear-gradient(
-          rgba(32, 53, 45, 0.12),
-          rgba(32, 53, 45, 0.25)
-        ),
-        url("images/hero.jpg")
-        center / cover;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-note {
-      margin-top: 28px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.87rem;
-      color: var(--muted);
-    }
-
-    .hero-note::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-    }
-
-    /* =========================================================
-       TRUST BAR
-    ========================================================= */
-
-    .trust-bar {
-      background: var(--green-dark);
-      color: white;
-      padding: 22px 0;
-    }
-
-    .trust-items {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 35px;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    .trust-item::before {
-      content: "✓";
-      color: #c6d9cc;
-      font-weight: 700;
-    }
-
-    /* =========================================================
-       INTRO
-    ========================================================= */
-
-    .intro {
-      background: white;
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .intro-image {
-      height: 550px;
-      border-radius: 20px;
-      background:
-        url("images/intro.jpg")
-        center / cover;
-    }
-
-    .intro-content h2 {
-      margin-bottom: 25px;
-    }
-
-    .intro-content p {
-      margin-bottom: 20px;
-    }
-
-    .signature {
-      margin-top: 30px;
-      font-family: "Playfair Display", serif;
-      font-size: 1.5rem;
-      color: var(--green-dark);
-    }
-
-    /* =========================================================
-       SERVICES
-    ========================================================= */
-
-    .services {
-      background: var(--cream);
-    }
-
-    .section-heading {
-      max-width: 700px;
-      margin-bottom: 50px;
-    }
-
-    .section-heading h2 {
-      margin-bottom: 18px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: white;
-      padding: 35px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      transition: all 0.25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--green-light);
-      color: var(--green-dark);
-      margin-bottom: 25px;
-      font-size: 1.3rem;
-    }
-
-    .service-card h3 {
-      margin-bottom: 12px;
-    }
-
-    /* =========================================================
-       AGED CARE / PROVIDERS
-    ========================================================= */
-
-    .providers {
-      background: var(--green-dark);
-      color: white;
-    }
-
-    .providers p {
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .providers-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .providers h2 {
-      color: white;
-      margin-bottom: 22px;
-    }
-
-    .provider-list {
-      list-style: none;
-      margin: 28px 0;
-    }
-
-    .provider-list li {
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-      display: flex;
-      gap: 12px;
-    }
-
-    .provider-list li::before {
-      content: "✓";
-      color: #bdd4c6;
-      font-weight: 700;
-    }
-
-    .provider-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 20px;
-      padding: 40px;
-    }
-
-    .provider-card h3 {
-      color: white;
-      margin-bottom: 15px;
-    }
-
-    .provider-card p {
-      margin-bottom: 20px;
-    }
-
-    /* =========================================================
-       BENEFITS
-    ========================================================= */
-
-    .benefits {
-      background: white;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .benefit {
-      padding: 28px;
-      background: var(--cream);
-      border-radius: var(--radius);
-    }
-
-    .benefit h3 {
-      margin-bottom: 8px;
-    }
-
-    /* =========================================================
-       ABOUT
-    ========================================================= */
-
-    .about {
-      background: var(--cream);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .about-image {
-      height: 620px;
-      border-radius: 20px;
-      background:
-        url("images/about.jpg")
-        center / cover;
-    }
-
-    .about-content h2 {
-      margin-bottom: 22px;
-    }
-
-    .about-content p {
-      margin-bottom: 20px;
-    }
-
-    .credentials {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .credential {
-      background: white;
-      padding: 18px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    /* =========================================================
-       PROCESS
-    ========================================================= */
-
-    .process {
-      background: white;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .process-step {
-      position: relative;
-      padding: 30px 25px;
-    }
-
-    .step-number {
-      font-family: "Playfair Display", serif;
-      font-size: 3rem;
-      color: var(--green-light);
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-
-    .process-step h3 {
-      margin-bottom: 10px;
-    }
-
-    /* =========================================================
-       SERVICE AREA
-    ========================================================= */
-
-    .area {
-      background: var(--cream-dark);
-    }
-
-    .area-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .area-box {
-      min-height: 420px;
-      border-radius: 20px;
-      background:
-        linear-gradient(
-          rgba(77,117,100,0.08),
-          rgba(77,117,100,0.08)
-        ),
-        url("images/area.jpg")
-        center / cover;
-    }
-
-    .area-content h2 {
-      margin-bottom: 20px;
-    }
-
-    .area-content p {
-      margin-bottom: 20px;
-    }
-
-    .area-list {
-      columns: 2;
-      list-style: none;
-      margin-top: 25px;
-    }
-
-    .area-list li {
-      padding: 7px 0;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    /* =========================================================
-       FAQ
-    ========================================================= */
-
-    .faq {
-      background: white;
-    }
-
-    .faq-container {
-      max-width: 850px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .faq-question {
-      width: 100%;
-      padding: 24px 0;
-      border: none;
-      background: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: left;
-      color: var(--text);
-      font-weight: 700;
-      font-size: 1rem;
-    }
-
-    .faq-question span {
-      font-size: 1.5rem;
-      color: var(--green);
-      transition: transform 0.2s ease;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-
-    .faq-answer p {
-      padding-bottom: 24px;
-    }
-
-    .faq-item.active .faq-question span {
-      transform: rotate(45deg);
-    }
-
-    /* =========================================================
-       CTA
-    ========================================================= */
-
-    .cta {
-      padding: 100px 0;
-      background: var(--green-light);
-    }
-
-    .cta-inner {
-      max-width: 850px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .cta h2 {
-      margin-bottom: 20px;
-    }
-
-    .cta p {
-      max-width: 650px;
-      margin: 0 auto 30px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    /* =========================================================
-       CONTACT
-    ========================================================= */
-
-    .contact {
-      background: var(--cream);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 70px;
-    }
-
-    .contact-info h2 {
-      margin-bottom: 20px;
-    }
-
-    .contact-detail {
-      display: flex;
-      gap: 15px;
-      margin-top: 25px;
-    }
-
-    .contact-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--green-light);
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-
-    .contact-detail strong {
-      display: block;
-      margin-bottom: 3px;
-    }
-
-    .contact-form {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 7px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 13px 14px;
-      outline: none;
-      background: #fbfbfa;
-      color: var(--text);
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--green);
-    }
-
-    .form-group textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .form-note {
-      font-size: 0.75rem;
-      margin-top: 10px;
-    }
-
-    .enquiry-type-selector {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .enquiry-option {
-      cursor: pointer;
-    }
-
-    .enquiry-option input {
-      position: absolute;
-      opacity: 0;
-      width: 1px;
-      height: 1px;
-    }
-
-    .enquiry-option span {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #fbfbfa;
-      font-size: 0.83rem;
-      font-weight: 600;
-      color: var(--muted);
-      transition: all 0.2s ease;
-    }
-
-    .enquiry-option input:checked + span {
-      background: var(--green-dark);
-      border-color: var(--green-dark);
-      color: white;
-    }
-
-    .enquiry-option input:focus-visible + span {
-      outline: 2px solid var(--green);
-      outline-offset: 2px;
-    }
-
-    .field-group {
-      padding-top: 4px;
-      border-top: 1px solid var(--border);
-      margin-top: 20px;
-      margin-bottom: 4px;
-    }
-
-    .field-group:first-of-type {
-      border-top: none;
-      margin-top: 4px;
-    }
-
-    .form-checkbox label {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text);
-      cursor: pointer;
-    }
-
-    .form-checkbox input {
-      margin-top: 3px;
-      width: auto;
-      flex-shrink: 0;
-    }
-
-    .form-note-privacy {
-      font-style: italic;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-    footer {
-      background: #182820;
-      color: white;
-      padding: 55px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr 0.7fr;
-      gap: 50px;
-      padding-bottom: 45px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    footer h3 {
-      margin-bottom: 15px;
-    }
-
-    footer p {
-      color: rgba(255,255,255,0.65);
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 9px;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.9rem;
-    }
-
-    .footer-links a:hover {
-      color: white;
-    }
-
-    .copyright {
-      padding-top: 22px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.45);
-    }
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-        position: absolute;
-        top: 76px;
-        left: 0;
-        width: 100%;
-        background: var(--cream);
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px 5%;
-        gap: 0;
-        display: none;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 13px 0;
-      }
-
-      .nav-cta {
-        text-align: center;
-        margin-top: 8px;
-      }
-
-      .mobile-menu {
-        display: block;
-      }
-
-      .hero-grid,
-      .intro-grid,
-      .providers-grid,
-      .about-grid,
-      .area-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .hero {
-        padding-top: 120px;
-        padding-bottom: 70px;
-      }
-
-      .hero-image {
-        min-height: 480px;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .intro-image {
-        height: 450px;
-      }
-
-      .about-image {
-        height: 500px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .section {
-        padding: 70px 0;
-      }
-
-      h1 {
-        font-size: 3rem;
-      }
-
-      h2 {
-        font-size: 2.3rem;
-      }
-
-      .hero-buttons,
-      .cta-buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-image {
-        min-height: 400px;
-        border-radius: 100px 100px 20px 20px;
-      }
-
-      .services-grid,
-      .benefits-grid,
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-form {
-        padding: 25px;
-      }
-
-      .area-list {
-        columns: 1;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .copyright {
-        flex-direction: column;
-      }
-    }
-
-  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1M3XWCFQXK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1M3XWCFQXK');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Kidman Health | Mobile Remedial Massage Melbourne</title>
+
+<meta name="description" content="Kidman Health provides professional mobile remedial massage therapy in Melbourne, with in-home services for older adults and clients receiving home care.">
+<meta name="keywords" content="remedial massage Melbourne, mobile remedial massage, home massage Melbourne, aged care massage, Support at Home massage, remedial massage Thornbury">
+<meta name="author" content="Kidman Health">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Kidman Health | Mobile Remedial Massage">
+<meta property="og:description" content="Professional remedial massage delivered to your home across Melbourne.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kidmanhealth.com">
+
+<link rel="canonical" href="https://kidmanhealth.com">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body { font-family: "DM Sans", sans-serif; color: #26332d; background: #f8f7f3; line-height: 1.6; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+:root {
+  --green-dark: #20352d;
+  --green: #4d7564;
+  --green-light: #dfe9e3;
+  --cream: #f8f7f3;
+  --cream-dark: #eeeae1;
+  --white: #ffffff;
+  --text: #26332d;
+  --muted: #66736c;
+  --border: #dce2dd;
+  --gold: #b79a62;
+
+  --hero-deep: #132019;
+  --hero-cream: #FBF7EE;
+
+  --max-width: 1180px;
+  --radius: 16px;
+  --shadow: 0 12px 40px rgba(32, 53, 45, 0.08);
+}
+
+/* =========================================================
+   GENERAL
+========================================================= */
+.container { width: min(92%, var(--max-width)); margin: 0 auto; }
+.section { padding: 100px 0; }
+.section-small { padding: 70px 0; }
+
+.section-label {
+  display: inline-block;
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+h1, h2, h3 { line-height: 1.15; }
+h1, h2 { font-family: "Playfair Display", serif; font-weight: 600; }
+h1 { font-size: clamp(3rem, 6vw, 5.3rem); letter-spacing: -0.035em; }
+h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); letter-spacing: -0.025em; }
+h3 { font-size: 1.25rem; }
+p { color: var(--muted); }
+.lead { font-size: 1.12rem; line-height: 1.8; }
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 23px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+.btn-primary { background: var(--green-dark); color: white; }
+.btn-primary:hover { background: var(--green); transform: translateY(-2px); }
+.btn-secondary { background: transparent; border-color: var(--green-dark); color: var(--green-dark); }
+.btn-secondary:hover { background: var(--green-dark); color: white; }
+.btn-light { background: white; color: var(--green-dark); }
+.btn-light:hover { transform: translateY(-2px); }
+
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+/* =========================================================
+   NAVIGATION (fixed, transparent over the hero, solid once scrolled)
+========================================================= */
+header.site-header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: var(--hero-cream);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+header.site-header.is-scrolled {
+  background: rgba(19, 32, 25, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: rgba(251, 247, 238, 0.12);
+}
+.kh-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: max(1rem, env(safe-area-inset-top)) clamp(1.25rem, 5vw, 4rem) 1rem;
+}
+.kh-nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.005em;
+  color: inherit;
+  white-space: nowrap;
+}
+.kh-nav__mark { display: block; height: 3.25rem; width: auto; }
+.kh-nav__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.9rem);
+  list-style: none;
+}
+.kh-nav__links a {
+  display: inline-block;
+  color: rgba(251, 247, 238, 0.82);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.kh-nav__links a:hover { color: #fff; border-color: rgba(251, 247, 238, 0.7); }
+.kh-nav__links a.kh-nav__cta {
+  color: var(--hero-deep);
+  background: var(--hero-cream);
+  padding: 0.6rem 1.15rem;
+  border-radius: 999px;
+  border-bottom: 0;
+}
+.kh-nav__links a.kh-nav__cta:hover { background: #fff; color: var(--hero-deep); }
+.kh-nav__toggle {
+  display: none;
+  place-items: center;
+  background: none;
+  border: 1px solid rgba(251, 247, 238, 0.4);
+  color: inherit;
+  width: 2.75rem; height: 2.75rem;
+  border-radius: 999px;
+  font-size: 1.15rem;
+}
+header.site-header a:focus-visible,
+header.site-header button:focus-visible,
+.kh-hero a:focus-visible { outline-color: var(--hero-cream); }
+
+/* =========================================================
+   HERO (shader background)
+========================================================= */
+.kh-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--hero-cream);
+  background:
+    radial-gradient(90% 70% at 78% 30%, rgba(77, 117, 100, 0.75), transparent 70%),
+    radial-gradient(70% 60% at 20% 90%, rgba(77, 117, 100, 0.35), transparent 70%),
+    var(--hero-deep);
+}
+.kh-hero__canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
+.kh-hero__canvas.is-ready { opacity: 1; }
+.kh-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(19, 32, 25, 0.62) 0%, rgba(19, 32, 25, 0.25) 55%, rgba(19, 32, 25, 0) 80%),
+    linear-gradient(180deg, rgba(19, 32, 25, 0.35) 0%, rgba(19, 32, 25, 0) 22%, rgba(19, 32, 25, 0) 70%, rgba(19, 32, 25, 0.7) 100%);
+}
+.kh-hero__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 78rem;
+  padding: 8.5rem clamp(1.25rem, 5vw, 4rem) clamp(2.5rem, 6vh, 4.5rem);
+}
+.kh-hero__eyebrow {
+  margin: 0 0 1.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(251, 247, 238, 0.8);
+}
+.kh-hero__title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(2.9rem, 8.6vw, 6.9rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  max-width: 13ch;
+  text-wrap: balance;
+}
+.kh-hero__title span { display: block; }
+.kh-hero__title em { font-style: italic; color: rgba(251, 247, 238, 0.78); }
+.kh-hero__lede {
+  margin: 1.9rem 0 0;
+  max-width: 34rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(251, 247, 238, 0.88);
+}
+.kh-hero__actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.4rem; }
+.kh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0.85rem 1.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+.kh-btn--primary { background: var(--hero-cream); color: var(--hero-deep); }
+.kh-btn--primary:hover { background: #fff; transform: translateY(-1px); }
+.kh-btn--ghost { color: var(--hero-cream); border: 1px solid rgba(251, 247, 238, 0.5); }
+.kh-btn--ghost:hover { border-color: var(--hero-cream); background: rgba(251, 247, 238, 0.08); }
+
+.kh-hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2.2rem;
+  list-style: none;
+  padding: 1.4rem clamp(1.25rem, 5vw, 4rem) max(1.6rem, env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(251, 247, 238, 0.18);
+  font-size: 0.95rem;
+  color: rgba(251, 247, 238, 0.85);
+}
+
+@keyframes kh-rise {
+  from { opacity: 0; transform: translateY(1.1rem); filter: blur(6px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+.kh-in {
+  opacity: 0;
+  animation: kh-rise 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 140ms + 200ms);
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+.intro { background: white; }
+.intro-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 80px; align-items: center; }
+.intro-image { height: 550px; border-radius: 20px; background: url("images/intro.jpg") center / cover; }
+.intro-content h2 { margin-bottom: 25px; }
+.intro-content p { margin-bottom: 20px; }
+.signature { margin-top: 30px; font-family: "Playfair Display", serif; font-size: 1.5rem; color: var(--green-dark); }
+
+/* =========================================================
+   SERVICES
+========================================================= */
+.services { background: var(--cream); }
+.section-heading { max-width: 700px; margin-bottom: 50px; }
+.section-heading h2 { margin-bottom: 18px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-card { background: white; padding: 35px; border-radius: var(--radius); border: 1px solid var(--border); transition: all 0.25s ease; }
+.service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.service-icon { width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; background: var(--green-light); color: var(--green-dark); margin-bottom: 25px; font-size: 1.3rem; }
+.service-card h3 { margin-bottom: 12px; }
+
+/* =========================================================
+   PROVIDERS
+========================================================= */
+.providers { background: var(--green-dark); color: white; }
+.providers p { color: rgba(255, 255, 255, 0.75); }
+.providers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.providers h2 { color: white; margin-bottom: 22px; }
+.provider-list { list-style: none; margin: 28px 0; }
+.provider-list li { padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.12); display: flex; gap: 12px; }
+.provider-list li::before { content: "✓"; color: #bdd4c6; font-weight: 700; }
+.provider-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 20px; padding: 40px; }
+.provider-card h3 { color: white; margin-bottom: 15px; }
+.provider-card p { margin-bottom: 20px; }
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+.benefits { background: white; }
+.benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.benefit { padding: 28px; background: var(--cream); border-radius: var(--radius); }
+.benefit h3 { margin-bottom: 8px; }
+
+/* =========================================================
+   ABOUT
+========================================================= */
+.about { background: var(--cream); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.about-image { height: 620px; border-radius: 20px; background: url("images/about.jpg") center / cover; }
+.about-content h2 { margin-bottom: 22px; }
+.about-content p { margin-bottom: 20px; }
+.credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 30px; }
+.credential { background: white; padding: 18px; border-radius: 12px; border: 1px solid var(--border); font-size: 0.88rem; font-weight: 600; }
+
+/* =========================================================
+   PROCESS
+========================================================= */
+.process { background: white; }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.process-step { position: relative; padding: 30px 25px; }
+.step-number { font-family: "Playfair Display", serif; font-size: 3rem; color: var(--green-light); line-height: 1; margin-bottom: 20px; }
+.process-step h3 { margin-bottom: 10px; }
+
+/* =========================================================
+   SERVICE AREA
+========================================================= */
+.area { background: var(--cream-dark); }
+.area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.area-box {
+  min-height: 420px;
+  border-radius: 20px;
+  background: linear-gradient(rgba(77,117,100,0.08), rgba(77,117,100,0.08)), url("images/area.jpg") center / cover;
+}
+.area-content h2 { margin-bottom: 20px; }
+.area-content p { margin-bottom: 20px; }
+.area-list { columns: 2; list-style: none; margin-top: 25px; }
+.area-list li { padding: 7px 0; color: var(--text); font-weight: 500; }
+
+/* =========================================================
+   FAQ
+========================================================= */
+.faq { background: white; }
+.faq-container { max-width: 850px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question {
+  width: 100%;
+  padding: 24px 0;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.faq-question span { font-size: 1.5rem; color: var(--green); transition: transform 0.2s ease; }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-answer p { padding-bottom: 24px; }
+.faq-item.active .faq-question span { transform: rotate(45deg); }
+
+/* =========================================================
+   CTA
+========================================================= */
+.cta { padding: 100px 0; background: var(--green-light); }
+.cta-inner { max-width: 850px; margin: 0 auto; text-align: center; }
+.cta h2 { margin-bottom: 20px; }
+.cta p { max-width: 650px; margin: 0 auto 30px; }
+.cta-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+/* =========================================================
+   CONTACT
+========================================================= */
+.contact { background: var(--cream); }
+.contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 70px; }
+.contact-info h2 { margin-bottom: 20px; }
+.contact-detail { display: flex; gap: 15px; margin-top: 25px; }
+.contact-icon { width: 42px; height: 42px; border-radius: 50%; background: var(--green-light); display: grid; place-items: center; flex-shrink: 0; }
+.contact-detail strong { display: block; margin-bottom: 3px; }
+.contact-form { background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 7px; }
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 14px;
+  outline: none;
+  background: #fbfbfa;
+  color: var(--text);
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--green); }
+.form-group textarea { min-height: 130px; resize: vertical; }
+.form-note { font-size: 0.75rem; margin-top: 10px; }
+.enquiry-type-selector { display: flex; flex-wrap: wrap; gap: 10px; }
+.enquiry-option { cursor: pointer; }
+.enquiry-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.enquiry-option span {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fbfbfa;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+.enquiry-option input:checked + span { background: var(--green-dark); border-color: var(--green-dark); color: white; }
+.enquiry-option input:focus-visible + span { outline: 2px solid var(--green); outline-offset: 2px; }
+.field-group { padding-top: 4px; border-top: 1px solid var(--border); margin-top: 20px; margin-bottom: 4px; }
+.field-group:first-of-type { border-top: none; margin-top: 4px; }
+.form-checkbox label { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; font-weight: 500; color: var(--text); cursor: pointer; }
+.form-checkbox input { margin-top: 3px; width: auto; flex-shrink: 0; }
+.form-note-privacy { font-style: italic; color: var(--muted); margin-bottom: 16px; }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer { background: #182820; color: white; padding: 55px 0 25px; }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 0.7fr 0.7fr; gap: 50px; padding-bottom: 45px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+footer h3 { margin-bottom: 15px; }
+footer p { color: rgba(255,255,255,0.65); }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 9px; }
+.footer-links a { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+.footer-links a:hover { color: white; }
+.copyright { padding-top: 22px; display: flex; justify-content: space-between; gap: 20px; font-size: 0.75rem; color: rgba(255,255,255,0.45); }
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 900px) {
+  .kh-nav__toggle { display: inline-grid; }
+  .kh-nav__links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    left: clamp(1.25rem, 5vw, 4rem);
+    right: clamp(1.25rem, 5vw, 4rem);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.75rem 1.25rem;
+    background: rgba(19, 32, 25, 0.96);
+    border: 1px solid rgba(251, 247, 238, 0.18);
+    border-radius: 1.25rem;
+  }
+  .kh-nav__links.is-open { display: flex; }
+  .kh-nav__links a { display: block; padding: 0.85rem 0; border-bottom: 1px solid rgba(251, 247, 238, 0.1); }
+  .kh-nav__links li:last-child a.kh-nav__cta { border: 0; margin: 0.6rem 0 0.3rem; text-align: center; }
+
+  .intro-grid, .providers-grid, .about-grid, .area-grid, .contact-grid { grid-template-columns: 1fr; gap: 45px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .intro-image { height: 450px; }
+  .about-image { height: 500px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .section { padding: 70px 0; }
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.3rem; }
+  .cta-buttons { flex-direction: column; }
+  .btn { width: 100%; }
+  .kh-btn { width: 100%; }
+  .kh-nav__mark { height: 2.6rem; }
+  .kh-nav__brand { font-size: 1.2rem; gap: 0.6rem; }
+  .kh-hero__trust { flex-direction: column; }
+  .services-grid, .benefits-grid, .process-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 25px; }
+  .area-list { columns: 1; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .copyright { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .kh-in { animation: none; opacity: 1; }
+  .kh-hero__canvas { transition: none; }
+}
+
+</style>
 </head>
 
 
 <body>
 
-  <!-- =======================================================
-       NAVIGATION
-  ======================================================== -->
+<!-- =======================================================
+     NAVIGATION
+======================================================== -->
+<header class="site-header" id="siteHeader">
+  <nav class="kh-nav" aria-label="Main">
 
-  <header>
+    <a href="#home" class="kh-nav__brand" aria-label="Kidman Health home">
+      <img class="kh-nav__mark" src="data:image/png;base64,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" alt="" width="52" height="51">
+      <span>Kidman Health</span>
+    </a>
 
-    <div class="container nav">
+    <button class="kh-nav__toggle" id="mobileMenu" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation">☰</button>
 
-      <a href="#home" class="logo">
-        Kidman Health
-        <span>Remedial Massage Therapy</span>
-      </a>
+    <ul class="kh-nav__links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="/conditions.html">Conditions</a></li>
+      <li><a href="#providers">For Providers</a></li>
+      <li><a href="#area">Service Area</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="kh-nav__cta">Get in Touch</a></li>
+    </ul>
 
-      <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">
-        ☰
-      </button>
+  </nav>
+</header>
 
-      <nav class="nav-links" id="navLinks">
 
-        <a href="#about">About</a>
+<main>
 
-        <a href="#services">Services</a>
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+  <section class="kh-hero" id="home">
 
-        <a href="/conditions.html">Conditions</a>
+    <canvas class="kh-hero__canvas" aria-hidden="true"></canvas>
 
-        <a href="#providers">For Providers</a>
+    <div class="kh-hero__body">
 
-        <a href="#area">Service Area</a>
+      <p class="kh-hero__eyebrow kh-in" style="--i:1">Mobile Remedial Massage</p>
 
-        <a href="#faq">FAQ</a>
+      <h1 class="kh-hero__title">
+        <span class="kh-in" style="--i:2">Better movement.</span>
+        <span class="kh-in" style="--i:3"><em>From the comfort of home.</em></span>
+      </h1>
 
-        <a href="#contact" class="nav-cta">Get in Touch</a>
+      <p class="kh-hero__lede kh-in" style="--i:4">
+        Professional remedial massage therapy delivered to your home across Melbourne. Personalised treatment focused on comfort, movement and helping you stay active and independent.
+      </p>
 
-      </nav>
+      <div class="kh-hero__actions kh-in" style="--i:5">
+        <a class="kh-btn kh-btn--primary" href="#contact">Book a Home Visit →</a>
+        <a class="kh-btn kh-btn--ghost" href="#providers">For Care Providers</a>
+      </div>
 
     </div>
 
-  </header>
+    <ul class="kh-hero__trust kh-in" style="--i:6">
+      <li>Mobile appointments Monday–Thursday</li>
+      <li>Diploma Qualified</li>
+      <li>Mobile Home Visits</li>
+      <li>Professional &amp; Insured</li>
+      <li>Aged Care Experience</li>
+    </ul>
 
+  </section>
 
-  <!-- =======================================================
-       HERO
-  ======================================================== -->
 
-  <main>
+  <!-- =====================================================
+       INTRO
+  ====================================================== -->
+  <section class="section intro" id="about">
+    <div class="container intro-grid">
 
-    <section class="hero" id="home">
+      <div class="intro-image"></div>
 
-      <div class="container hero-grid">
+      <div class="intro-content">
 
-        <div>
+        <span class="section-label">Why Kidman Health</span>
 
-          <span class="section-label">
-            Mobile Remedial Massage
-          </span>
-
-          <h1>
-            Better movement.<br>
-            <em>From the comfort of home.</em>
-          </h1>
-
-          <p class="lead hero-text">
-            Professional remedial massage therapy delivered to your
-            home across Melbourne. Personalised treatment focused on
-            comfort, movement and helping you stay active and independent.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a href="#contact" class="btn btn-primary">
-              Book a Home Visit →
-            </a>
-
-            <a href="#providers" class="btn btn-secondary">
-              For Care Providers
-            </a>
-
-          </div>
-
-          <div class="hero-note">
-            Mobile appointments Monday–Thursday
-          </div>
-
-        </div>
-
-        <div class="hero-image"></div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         TRUST BAR
-    ====================================================== -->
-
-    <section class="trust-bar">
-
-      <div class="container trust-items">
-
-        <div class="trust-item">
-          Diploma Qualified
-        </div>
-
-        <div class="trust-item">
-          Mobile Home Visits
-        </div>
-
-        <div class="trust-item">
-          Professional &amp; Insured
-        </div>
-
-        <div class="trust-item">
-          Aged Care Experience
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         INTRO
-    ====================================================== -->
-
-    <section class="section intro" id="about">
-
-      <div class="container intro-grid">
-
-        <div class="intro-image"></div>
-
-        <div class="intro-content">
-
-          <span class="section-label">
-            Why Kidman Health
-          </span>
-
-          <h2>
-            Personalised care, without the trip to the clinic.
-          </h2>
-
-          <p class="lead">
-            Getting to an appointment isn't always easy.
-            Kidman Health brings professional remedial massage
-            directly to you.
-          </p>
-
-          <p>
-            Each treatment begins with an individual assessment
-            and conversation about your goals, followed by a
-            treatment approach tailored to your needs.
-          </p>
-
-          <p>
-            The focus is on practical, comfortable treatment that
-            supports movement, function and quality of life.
-          </p>
-
-          <div class="signature">
-            Jake Kidman
-          </div>
-
-          <p>
-            Qualified Remedial Massage Therapist
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         SERVICES
-    ====================================================== -->
-
-    <section class="section services" id="services">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-label">
-            Services
-          </span>
-
-          <h2>
-            Treatment tailored to you.
-          </h2>
-
-          <p class="lead">
-            Remedial massage can be adapted to suit different
-            goals, comfort levels and functional needs.
-          </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-          <article class="service-card">
-
-            <div class="service-icon">✦</div>
-
-            <h3>Remedial Massage</h3>
-
-            <p>
-              Targeted hands-on treatment designed around
-              individual musculoskeletal needs and goals.
-            </p>
-
-          </article>
-
-
-          <article class="service-card">
-
-            <div class="service-icon">◌</div>
-
-            <h3>Myofascial Techniques</h3>
-
-            <p>
-              Techniques focused on soft tissue and fascial
-              restrictions that may affect movement and comfort.
-            </p>
-
-          </article>
-
-
-          <article class="service-card">
-
-            <div class="service-icon">+</div>
-
-            <h3>Trigger Point Therapy</h3>
-
-            <p>
-              Targeted treatment of areas of muscular tension
-              as part of a broader treatment plan.
-            </p>
-
-          </article>
-
-
-          <article class="service-card">
-
-            <div class="service-icon">↗</div>
-
-            <h3>Mobility Support</h3>
-
-            <p>
-              Treatment designed to complement an individual's
-              broader approach to maintaining movement and function.
-            </p>
-
-          </article>
-
-
-          <article class="service-card">
-
-            <div class="service-icon">♡</div>
-
-            <h3>Older Adult Care</h3>
-
-            <p>
-              Gentle, respectful and individualised treatment
-              delivered in the familiar surroundings of home.
-            </p>
-
-          </article>
-
-
-          <article class="service-card">
-
-            <div class="service-icon">⌂</div>
-
-            <h3>Home Visits</h3>
-
-            <p>
-              No travel to a clinic. Treatment comes directly
-              to your home.
-            </p>
-
-          </article>
-
-        </div>
-<div style="margin-top:40px;">
-  <a href="/services.html" class="btn btn-primary">View all services →</a>
-</div>
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         PROVIDERS
-    ====================================================== -->
-
-    <section class="section providers" id="providers">
-
-      <div class="container providers-grid">
-
-        <div>
-
-          <span class="section-label">
-            For Home Care Providers
-          </span>
-
-          <h2>
-            A reliable mobile therapy partner for your clients.
-          </h2>
-
-          <p class="lead">
-            Kidman Health works with care providers who need
-            professional remedial massage services delivered
-            in the client's home.
-          </p>
-
-          <ul class="provider-list">
-
-            <li>
-              Mobile service across Melbourne
-            </li>
-
-            <li>
-              Remedial massage qualified
-            </li>
-
-            <li>
-              Experience working with older adults
-            </li>
-
-            <li>
-              Professional indemnity &amp; public liability insurance
-            </li>
-
-            <li>
-              Worker screening and police checks
-            </li>
-
-            <li>
-              Aged Care Code of Conduct requirements understood
-            </li>
-
-          </ul>
-
-          <a href="#contact" class="btn btn-light">
-            Discuss a Referral →
-          </a>
-
-        </div>
-
-
-        <div class="provider-card">
-
-          <h3>
-            Looking for a mobile remedial therapist?
-          </h3>
-
-          <p>
-            If your organisation is looking for a qualified
-            remedial massage therapist to support clients in
-            their homes, I'd be happy to discuss your referral
-            process and service requirements.
-          </p>
-
-          <p>
-            Kidman Health can work with participating providers
-            as an external or third-party therapy provider,
-            subject to the provider's requirements and the
-            applicable aged care arrangements.
-          </p>
-
-          <a href="#contact" class="btn btn-light">
-            Contact Kidman Health
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         BENEFITS
-    ====================================================== -->
-
-    <section class="section benefits">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-label">
-            The Home Visit
-          </span>
-
-          <h2>
-            Why mobile treatment?
-          </h2>
-
-        </div>
-
-
-        <div class="benefits-grid">
-
-          <div class="benefit">
-
-            <h3>
-              No travel required
-            </h3>
-
-            <p>
-              Treatment takes place in your own home, removing
-              the need to travel to and from a clinic.
-            </p>
-
-          </div>
-
-
-          <div class="benefit">
-
-            <h3>
-              Familiar surroundings
-            </h3>
-
-            <p>
-              Being treated at home can provide a comfortable
-              and familiar environment.
-            </p>
-
-          </div>
-
-
-          <div class="benefit">
-
-            <h3>
-              Individualised treatment
-            </h3>
-
-            <p>
-              Every appointment is adjusted to the individual's
-              presentation, goals and tolerance.
-            </p>
-
-          </div>
-
-
-          <div class="benefit">
-
-            <h3>
-              Convenient scheduling
-            </h3>
-
-            <p>
-              Mobile appointments are designed to fit around
-              your existing routine and care arrangements.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         ABOUT
-    ====================================================== -->
-
-    <section class="section about">
-
-      <div class="container about-grid">
-
-        <div class="about-content">
-
-          <span class="section-label">
-            About Jake
-          </span>
-
-          <h2>
-            Clinical experience with a practical approach.
-          </h2>
-
-          <p class="lead">
-            I'm Jake, a qualified remedial massage therapist
-            focused on helping people move more comfortably and
-            get the most out of their day-to-day life.
-          </p>
-
-          <p>
-            I hold a Diploma of Remedial Massage and Bachelor
-            of Health Science, with experience working with
-            clients across clinical, sporting and community
-            environments.
-          </p>
-
-          <p>
-            My previous experience includes working with athletes
-            through an AFL cadetship, as well as providing mobile
-            remedial massage services to older adults.
-          </p>
-
-          <p>
-            Kidman Health was created to make professional,
-            personalised treatment more accessible by bringing
-            the treatment room to the client.
-          </p>
-
-
-          <div class="credentials">
-
-            <div class="credential">
-              Diploma of Remedial Massage
-            </div>
-
-            <div class="credential">
-              Bachelor of Health Science
-            </div>
-
-            <div class="credential">
-              Professional Insurance
-            </div>
-
-            <div class="credential">
-              Mobile Practice
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="about-image"></div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         PROCESS
-    ====================================================== -->
-
-    <section class="section process">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span class="section-label">
-            How It Works
-          </span>
-
-          <h2>
-            Simple from start to finish.
-          </h2>
-
-        </div>
-
-
-        <div class="process-grid">
-
-          <div class="process-step">
-
-            <div class="step-number">
-              01
-            </div>
-
-            <h3>
-              Get in touch
-            </h3>
-
-            <p>
-              Contact Kidman Health to discuss your needs
-              and availability.
-            </p>
-
-          </div>
-
-
-          <div class="process-step">
-
-            <div class="step-number">
-              02
-            </div>
-
-            <h3>
-              Initial assessment
-            </h3>
-
-            <p>
-              We'll discuss your goals, history and current
-              presentation before treatment.
-            </p>
-
-          </div>
-
-
-          <div class="process-step">
-
-            <div class="step-number">
-              03
-            </div>
-
-            <h3>
-              Personalised treatment
-            </h3>
-
-            <p>
-              Treatment is tailored to your individual needs
-              and comfort.
-            </p>
-
-          </div>
-
-
-          <div class="process-step">
-
-            <div class="step-number">
-              04
-            </div>
-
-            <h3>
-              Ongoing care
-            </h3>
-
-            <p>
-              Where appropriate, future treatment can be
-              discussed around your goals.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         SERVICE AREA
-    ====================================================== -->
-
-    <section class="section area" id="area">
-
-      <div class="container area-grid">
-
-        <div class="area-box"></div>
-
-        <div class="area-content">
-
-          <span class="section-label">
-            Service Area
-          </span>
-
-          <h2>
-            Mobile remedial massage across Melbourne.
-          </h2>
-
-          <p class="lead">
-            Kidman Health provides mobile appointments throughout
-            Melbourne's inner north and surrounding suburbs.
-          </p>
-
-          <p>
-            If you're unsure whether your suburb is within the
-            service area, get in touch and I'll let you know.
-          </p>
-
-          <ul class="area-list">
-
-<li><a href="/mobile-remedial-massage/thornbury.html">Thornbury</a></li>
-<li><a href="/mobile-remedial-massage/preston.html">Preston</a></li>
-<li><a href="/mobile-remedial-massage/northcote.html">Northcote</a></li>
-<li><a href="/mobile-remedial-massage/reservoir.html">Reservoir</a></li>
-<li><a href="/mobile-remedial-massage/fairfield.html">Fairfield</a></li>
-<li><a href="/mobile-remedial-massage/brunswick.html">Brunswick</a></li>
-<li><a href="/mobile-remedial-massage/coburg.html">Coburg</a></li>
-            <li>Alphington</li>
-            <li>Heidelberg</li>
-            <li>Brunswick</li>
-            <li>Coburg</li>
-            <li>Pascoe Vale</li>
-            <li>Fawkner</li>
-            <li>Surrounding suburbs</li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         FAQ
-    ====================================================== -->
-
-    <section class="section faq" id="faq">
-
-      <div class="container faq-container">
-
-        <div class="section-heading">
-
-          <span class="section-label">
-            Frequently Asked Questions
-          </span>
-
-          <h2>
-            Questions, answered.
-          </h2>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <button class="faq-question">
-            Do you come to my home?
-            <span>+</span>
-          </button>
-
-          <div class="faq-answer">
-
-            <p>
-              Yes. Kidman Health is a mobile remedial massage
-              service, meaning treatment is provided in your home. We provide the massage table and towels.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <button class="faq-question">
-            What areas do you service?
-            <span>+</span>
-          </button>
-
-          <div class="faq-answer">
-
-            <p>
-              Kidman Health primarily services Melbourne's inner
-              north and surrounding suburbs. Contact me if you're
-              unsure whether your suburb is covered.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <button class="faq-question">
-            Do you work with home care providers?
-            <span>+</span>
-          </button>
-
-          <div class="faq-answer">
-
-            <p>
-              Yes. Kidman Health can work with participating home
-              care providers and other organisations as an external
-              or third-party therapy provider, subject to the
-              provider's requirements and applicable funding
-              arrangements.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <button class="faq-question">
-            Can remedial massage be accessed through Support at Home?
-            <span>+</span>
-          </button>
-
-          <div class="faq-answer">
-
-            <p>
-              Remedial massage is included in the Support at Home
-              service list. Eligibility, referral, prescribing and
-              claiming requirements apply, so arrangements should
-              be confirmed with the client's registered provider
-              and care team.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <button class="faq-question">
-            What should I have ready for a home appointment?
-            <span>+</span>
-          </button>
-
-          <div class="faq-answer">
-
-            <p>
-              A suitable space for treatment is all that's needed.
-              Specific requirements can be discussed before your
-              first appointment.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="faq-item">
-
-          <button class="faq-question">
-            How do I make a referral?
-            <span>+</span>
-          </button>
-
-          <div class="faq-answer">
-
-            <p>
-              Contact Kidman Health using the enquiry form below.
-              Care providers can also get in touch to discuss their
-              referral and subcontracting process.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         CTA
-    ====================================================== -->
-
-    <section class="cta">
-
-      <div class="container cta-inner">
-
-        <span class="section-label">
-          Ready to get started?
-        </span>
-
-        <h2>
-          Let's bring treatment to you.
-        </h2>
+        <h2>Personalised care, without the trip to the clinic.</h2>
 
         <p class="lead">
-          Whether you're looking for a home visit for yourself
-          or looking for a reliable therapy provider for your
-          clients, I'd love to hear from you.
+          Getting to an appointment isn't always easy.
+          Kidman Health brings professional remedial massage
+          directly to you.
         </p>
 
-        <div class="cta-buttons">
+        <p>
+          Each treatment begins with an individual assessment
+          and conversation about your goals, followed by a
+          treatment approach tailored to your needs.
+        </p>
 
-          <a href="#contact" class="btn btn-primary">
-            Make an Enquiry →
-          </a>
+        <p>
+          The focus is on practical, comfortable treatment that
+          supports movement, function and quality of life.
+        </p>
 
-          <a href="#providers" class="btn btn-secondary">
-            Provider Referrals
-          </a>
+        <div class="signature">Jake Kidman</div>
 
+        <p>Qualified Remedial Massage Therapist</p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       SERVICES
+  ====================================================== -->
+  <section class="section services" id="services">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">Services</span>
+        <h2>Treatment tailored to you.</h2>
+        <p class="lead">
+          Remedial massage can be adapted to suit different
+          goals, comfort levels and functional needs.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card">
+          <div class="service-icon">✦</div>
+          <h3>Remedial Massage</h3>
+          <p>Targeted hands-on treatment designed around individual musculoskeletal needs and goals.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">◌</div>
+          <h3>Myofascial Techniques</h3>
+          <p>Techniques focused on soft tissue and fascial restrictions that may affect movement and comfort.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">+</div>
+          <h3>Trigger Point Therapy</h3>
+          <p>Targeted treatment of areas of muscular tension as part of a broader treatment plan.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">↗</div>
+          <h3>Mobility Support</h3>
+          <p>Treatment designed to complement an individual's broader approach to maintaining movement and function.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">♡</div>
+          <h3>Older Adult Care</h3>
+          <p>Gentle, respectful and individualised treatment delivered in the familiar surroundings of home.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">⌂</div>
+          <h3>Home Visits</h3>
+          <p>No travel to a clinic. Treatment comes directly to your home.</p>
+        </article>
+
+      </div>
+
+      <div style="margin-top:40px;">
+        <a href="/services.html" class="btn btn-primary">View all services →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       PROVIDERS
+  ====================================================== -->
+  <section class="section providers" id="providers">
+    <div class="container providers-grid">
+
+      <div>
+
+        <span class="section-label">For Home Care Providers</span>
+
+        <h2>A reliable mobile therapy partner for your clients.</h2>
+
+        <p class="lead">
+          Kidman Health works with care providers who need
+          professional remedial massage services delivered
+          in the client's home.
+        </p>
+
+        <ul class="provider-list">
+          <li>Mobile service across Melbourne</li>
+          <li>Remedial massage qualified</li>
+          <li>Experience working with older adults</li>
+          <li>Professional indemnity &amp; public liability insurance</li>
+          <li>Worker screening and police checks</li>
+          <li>Aged Care Code of Conduct requirements understood</li>
+        </ul>
+
+        <a href="#contact" class="btn btn-light">Discuss a Referral →</a>
+
+      </div>
+
+      <div class="provider-card">
+
+        <h3>Looking for a mobile remedial therapist?</h3>
+
+        <p>
+          If your organisation is looking for a qualified
+          remedial massage therapist to support clients in
+          their homes, I'd be happy to discuss your referral
+          process and service requirements.
+        </p>
+
+        <p>
+          Kidman Health can work with participating providers
+          as an external or third-party therapy provider,
+          subject to the provider's requirements and the
+          applicable aged care arrangements.
+        </p>
+
+        <a href="#contact" class="btn btn-light">Contact Kidman Health</a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       BENEFITS
+  ====================================================== -->
+  <section class="section benefits">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">The Home Visit</span>
+        <h2>Why mobile treatment?</h2>
+      </div>
+
+      <div class="benefits-grid">
+
+        <div class="benefit">
+          <h3>No travel required</h3>
+          <p>Treatment takes place in your own home, removing the need to travel to and from a clinic.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>Familiar surroundings</h3>
+          <p>Being treated at home can provide a comfortable and familiar environment.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>Individualised treatment</h3>
+          <p>Every appointment is adjusted to the individual's presentation, goals and tolerance.</p>
+        </div>
+
+        <div class="benefit">
+          <h3>Convenient scheduling</h3>
+          <p>Mobile appointments are designed to fit around your existing routine and care arrangements.</p>
         </div>
 
       </div>
 
-    </section>
+    </div>
+  </section>
 
 
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
+  <!-- =====================================================
+       ABOUT
+  ====================================================== -->
+  <section class="section about">
+    <div class="container about-grid">
 
-    <section class="section contact" id="contact">
+      <div class="about-content">
 
-      <div class="container contact-grid">
+        <span class="section-label">About Jake</span>
 
-        <div class="contact-info">
+        <h2>Clinical experience with a practical approach.</h2>
 
-          <span class="section-label">
-            Contact
-          </span>
+        <p class="lead">
+          I'm Jake, a qualified remedial massage therapist
+          focused on helping people move more comfortably and
+          get the most out of their day-to-day life.
+        </p>
 
-          <h2>
-            Get in touch.
-          </h2>
+        <p>
+          I hold a Diploma of Remedial Massage and Bachelor
+          of Health Science, with experience working with
+          clients across clinical, sporting and community
+          environments.
+        </p>
 
-          <p class="lead">
-            Have a question, want to book an appointment,
-            or looking to discuss a referral?
-          </p>
+        <p>
+          My previous experience includes working with athletes
+          through an AFL cadetship, as well as providing mobile
+          remedial massage services to older adults.
+        </p>
 
+        <p>
+          Kidman Health was created to make professional,
+          personalised treatment more accessible by bringing
+          the treatment room to the client.
+        </p>
 
-          <div class="contact-detail">
-
-            <div class="contact-icon">
-              ✉
-            </div>
-
-            <div>
-
-              <strong>Email</strong>
-
-              <!-- CHANGE THIS EMAIL -->
-              <a href="mailto:jake@kidmanhealth.com">
-                jake@kidmanhealth.com
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="contact-detail">
-
-            <div class="contact-icon">
-              ☎
-            </div>
-
-            <div>
-
-              <strong>Phone</strong>
-
-              <!-- CHANGE THIS PHONE -->
-              <a href="tel:0432 090 766">
-                0432 090 766
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="contact-detail">
-
-            <div class="contact-icon">
-              ⌂
-            </div>
-
-            <div>
-
-              <strong>Service</strong>
-
-              <span>
-                Mobile appointments across Melbourne
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="contact-detail">
-
-            <div class="contact-icon">
-              ◷
-            </div>
-
-            <div>
-
-              <strong>Availability</strong>
-
-              <span>
-                Monday – Thursday<br>
-                8:00am – 6:00pm
-              </span>
-
-            </div>
-
-          </div>
-
+        <div class="credentials">
+          <div class="credential">Diploma of Remedial Massage</div>
+          <div class="credential">Bachelor of Health Science</div>
+          <div class="credential">Professional Insurance</div>
+          <div class="credential">Mobile Practice</div>
         </div>
 
+      </div>
 
-        <div class="contact-form">
+      <div class="about-image"></div>
 
-          <form id="contactForm">
+    </div>
+  </section>
 
-            <div class="form-group">
 
-              <label>
-                What can we help with?
+  <!-- =====================================================
+       PROCESS
+  ====================================================== -->
+  <section class="section process">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">How It Works</span>
+        <h2>Simple from start to finish.</h2>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <h3>Get in touch</h3>
+          <p>Contact Kidman Health to discuss your needs and availability.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <h3>Initial assessment</h3>
+          <p>We'll discuss your goals, history and current presentation before treatment.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <h3>Personalised treatment</h3>
+          <p>Treatment is tailored to your individual needs and comfort.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <h3>Ongoing care</h3>
+          <p>Where appropriate, future treatment can be discussed around your goals.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       SERVICE AREA
+  ====================================================== -->
+  <section class="section area" id="area">
+    <div class="container area-grid">
+
+      <div class="area-box"></div>
+
+      <div class="area-content">
+
+        <span class="section-label">Service Area</span>
+
+        <h2>Mobile remedial massage across Melbourne.</h2>
+
+        <p class="lead">
+          Kidman Health provides mobile appointments throughout
+          Melbourne's inner north and surrounding suburbs.
+        </p>
+
+        <p>
+          If you're unsure whether your suburb is within the
+          service area, get in touch and I'll let you know.
+        </p>
+
+        <ul class="area-list">
+          <li><a href="/mobile-remedial-massage/thornbury.html">Thornbury</a></li>
+          <li><a href="/mobile-remedial-massage/preston.html">Preston</a></li>
+          <li><a href="/mobile-remedial-massage/northcote.html">Northcote</a></li>
+          <li><a href="/mobile-remedial-massage/reservoir.html">Reservoir</a></li>
+          <li><a href="/mobile-remedial-massage/fairfield.html">Fairfield</a></li>
+          <li><a href="/mobile-remedial-massage/brunswick.html">Brunswick</a></li>
+          <li><a href="/mobile-remedial-massage/coburg.html">Coburg</a></li>
+          <li>Alphington</li>
+          <li>Heidelberg</li>
+          <li>Pascoe Vale</li>
+          <li>Fawkner</li>
+          <li>Surrounding suburbs</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FAQ
+  ====================================================== -->
+  <section class="section faq" id="faq">
+    <div class="container faq-container">
+
+      <div class="section-heading">
+        <span class="section-label">Frequently Asked Questions</span>
+        <h2>Questions, answered.</h2>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you come to my home?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes. Kidman Health is a mobile remedial massage
+            service, meaning treatment is provided in your home. We provide the massage table and towels.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What areas do you service?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Kidman Health primarily services Melbourne's inner
+            north and surrounding suburbs. Contact me if you're
+            unsure whether your suburb is covered.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you work with home care providers?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Yes. Kidman Health can work with participating home
+            care providers and other organisations as an external
+            or third-party therapy provider, subject to the
+            provider's requirements and applicable funding
+            arrangements.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can remedial massage be accessed through Support at Home?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Remedial massage is included in the Support at Home
+            service list. Eligibility, referral, prescribing and
+            claiming requirements apply, so arrangements should
+            be confirmed with the client's registered provider
+            and care team.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What should I have ready for a home appointment?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            A suitable space for treatment is all that's needed.
+            Specific requirements can be discussed before your
+            first appointment.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How do I make a referral?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Contact Kidman Health using the enquiry form below.
+            Care providers can also get in touch to discuss their
+            referral and subcontracting process.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       CTA
+  ====================================================== -->
+  <section class="cta">
+    <div class="container cta-inner">
+
+      <span class="section-label">Ready to get started?</span>
+
+      <h2>Let's bring treatment to you.</h2>
+
+      <p class="lead">
+        Whether you're looking for a home visit for yourself
+        or looking for a reliable therapy provider for your
+        clients, I'd love to hear from you.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Make an Enquiry →</a>
+        <a href="#providers" class="btn btn-secondary">Provider Referrals</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+
+      <div class="contact-info">
+
+        <span class="section-label">Contact</span>
+
+        <h2>Get in touch.</h2>
+
+        <p class="lead">
+          Have a question, want to book an appointment,
+          or looking to discuss a referral?
+        </p>
+
+        <div class="contact-detail">
+          <div class="contact-icon">✉</div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:jake@kidmanhealth.com">jake@kidmanhealth.com</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">☎</div>
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:0432 090 766">0432 090 766</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">⌂</div>
+          <div>
+            <strong>Service</strong>
+            <span>Mobile appointments across Melbourne</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">◷</div>
+          <div>
+            <strong>Availability</strong>
+            <span>
+              Monday – Thursday<br>
+              8:00am – 6:00pm
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="contact-form">
+
+        <form id="contactForm">
+
+          <div class="form-group">
+
+            <label>What can we help with?</label>
+
+            <div class="enquiry-type-selector">
+
+              <label class="enquiry-option">
+                <input type="radio" name="enquiryType" value="general" checked>
+                <span>General Enquiry</span>
               </label>
 
-              <div class="enquiry-type-selector">
+              <label class="enquiry-option">
+                <input type="radio" name="enquiryType" value="home">
+                <span>Book a Home Appointment</span>
+              </label>
 
-                <label class="enquiry-option">
-                  <input type="radio" name="enquiryType" value="general" checked>
-                  <span>General Enquiry</span>
-                </label>
-
-                <label class="enquiry-option">
-                  <input type="radio" name="enquiryType" value="home">
-                  <span>Book a Home Appointment</span>
-                </label>
-
-                <label class="enquiry-option">
-                  <input type="radio" name="enquiryType" value="provider">
-                  <span>Care Provider Referral</span>
-                </label>
-
-              </div>
+              <label class="enquiry-option">
+                <input type="radio" name="enquiryType" value="provider">
+                <span>Care Provider Referral</span>
+              </label>
 
             </div>
 
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+          </div>
+
+
+          <!-- GENERAL ENQUIRY -->
+          <div class="field-group" data-branch="general">
+
+            <div class="form-group">
+              <label for="generalMessage">Message</label>
+              <textarea id="generalMessage" name="generalMessage" placeholder="Tell me a little about what you are looking for..."></textarea>
+            </div>
+
+          </div>
+
+
+          <!-- HOME APPOINTMENT BOOKING -->
+          <div class="field-group" data-branch="home" hidden>
 
             <div class="form-row">
 
               <div class="form-group">
-
-                <label for="name">
-                  Name
-                </label>
-
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                >
-
+                <label for="homeSuburb">Suburb</label>
+                <input type="text" id="homeSuburb" name="homeSuburb" placeholder="e.g. Thornbury">
               </div>
 
-
               <div class="form-group">
-
-                <label for="phone">
-                  Phone
-                </label>
-
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Your Phone Number"
-                >
-
+                <label for="homePreferredTime">Preferred day/time</label>
+                <input type="text" id="homePreferredTime" name="homePreferredTime" placeholder="e.g. Tuesday mornings">
               </div>
 
             </div>
-
 
             <div class="form-group">
+              <label for="homeReason">What's this appointment for?</label>
+              <select id="homeReason" name="homeReason">
+                <option value="General relaxation / wellbeing">General relaxation / wellbeing</option>
+                <option value="Chronic pain or tension">Chronic pain or tension</option>
+                <option value="Recovering from an injury">Recovering from an injury</option>
+                <option value="Mobility / movement support">Mobility / movement support</option>
+                <option value="Not sure - happy to discuss">Not sure – happy to discuss</option>
+              </select>
+            </div>
 
-              <label for="email">
-                Email
+            <div class="form-group">
+              <label for="homeHealthNotes">Any injuries or health conditions I should know about?</label>
+              <textarea id="homeHealthNotes" name="homeHealthNotes" placeholder="Optional, but it helps me prepare for your session"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="homeHeard">How did you hear about Kidman Health?</label>
+              <select id="homeHeard" name="homeHeard">
+                <option value="Google search">Google search</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Referral from friend/family">Referral from friend/family</option>
+                <option value="Flyer or poster">Flyer or poster</option>
+                <option value="GP or health professional">GP or health professional</option>
+                <option value="Aged care provider">Aged care provider</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="homeMessage">Anything else?</label>
+              <textarea id="homeMessage" name="homeMessage" placeholder="Any other details or questions"></textarea>
+            </div>
+
+          </div>
+
+
+          <!-- CARE PROVIDER REFERRAL -->
+          <div class="field-group" data-branch="provider" hidden>
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="providerOrg">Organisation name</label>
+                <input type="text" id="providerOrg" name="providerOrg" placeholder="e.g. Uniting AgeWell">
+              </div>
+
+              <div class="form-group">
+                <label for="providerRole">Your role</label>
+                <input type="text" id="providerRole" name="providerRole" placeholder="e.g. Care Coordinator">
+              </div>
+
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="clientName">Client name</label>
+                <input type="text" id="clientName" name="clientName" placeholder="Client's full name">
+              </div>
+
+              <div class="form-group">
+                <label for="clientSuburb">Client suburb</label>
+                <input type="text" id="clientSuburb" name="clientSuburb" placeholder="e.g. Preston">
+              </div>
+
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="fundingStream">Funding stream</label>
+                <select id="fundingStream" name="fundingStream">
+                  <option value="Support at Home">Support at Home</option>
+                  <option value="CHSP">Commonwealth Home Support Programme (CHSP)</option>
+                  <option value="Private / self-funded">Private / self-funded</option>
+                  <option value="Not sure">Not sure</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="visitFrequency">Preferred visit frequency</label>
+                <select id="visitFrequency" name="visitFrequency">
+                  <option value="Clinician directed">Clinician directed</option>
+                  <option value="Weekly">Weekly</option>
+                  <option value="Fortnightly">Fortnightly</option>
+                  <option value="Single assessment">Single assessment</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="referralReason">Reason for referral</label>
+              <textarea id="referralReason" name="referralReason" placeholder="e.g. pain management, mobility support, general condition maintenance"></textarea>
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="preferredStartDate">Preferred start date</label>
+                <input type="date" id="preferredStartDate" name="preferredStartDate">
+              </div>
+
+              <div class="form-group">
+                <label for="accessNotes">Mobility / access notes</label>
+                <input type="text" id="accessNotes" name="accessNotes" placeholder="e.g. uses a walker, stairs at entrance">
+              </div>
+
+            </div>
+
+            <div class="form-group form-checkbox">
+              <label>
+                <input type="checkbox" id="providerConsent" name="providerConsent">
+                I confirm appropriate consent is in place to share
+                this client's details for the purpose of this referral.
               </label>
-
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your email address"
-                required
-              >
-
             </div>
 
-
-            <!-- ===============================================
-                 GENERAL ENQUIRY
-            ================================================ -->
-
-            <div class="field-group" data-branch="general">
-
-              <div class="form-group">
-
-                <label for="generalMessage">
-                  Message
-                </label>
-
-                <textarea
-                  id="generalMessage"
-                  name="generalMessage"
-                  placeholder="Tell me a little about what you are looking for..."
-                ></textarea>
-
-              </div>
-
-            </div>
-
-
-            <!-- ===============================================
-                 HOME APPOINTMENT BOOKING
-            ================================================ -->
-
-            <div class="field-group" data-branch="home" hidden>
-
-              <div class="form-row">
-
-                <div class="form-group">
-
-                  <label for="homeSuburb">
-                    Suburb
-                  </label>
-
-                  <input
-                    type="text"
-                    id="homeSuburb"
-                    name="homeSuburb"
-                    placeholder="e.g. Thornbury"
-                  >
-
-                </div>
-
-                <div class="form-group">
-
-                  <label for="homePreferredTime">
-                    Preferred day/time
-                  </label>
-
-                  <input
-                    type="text"
-                    id="homePreferredTime"
-                    name="homePreferredTime"
-                    placeholder="e.g. Tuesday mornings"
-                  >
-
-                </div>
-
-              </div>
-
-              <div class="form-group">
-
-                <label for="homeReason">
-                  What's this appointment for?
-                </label>
-
-                <select id="homeReason" name="homeReason">
-
-                  <option value="General relaxation / wellbeing">
-                    General relaxation / wellbeing
-                  </option>
-
-                  <option value="Chronic pain or tension">
-                    Chronic pain or tension
-                  </option>
-
-                  <option value="Recovering from an injury">
-                    Recovering from an injury
-                  </option>
-
-                  <option value="Mobility / movement support">
-                    Mobility / movement support
-                  </option>
-
-                  <option value="Not sure - happy to discuss">
-                    Not sure – happy to discuss
-                  </option>
-
-                </select>
-
-              </div>
-
-              <div class="form-group">
-
-                <label for="homeHealthNotes">
-                  Any injuries or health conditions I should know about?
-                </label>
-
-                <textarea
-                  id="homeHealthNotes"
-                  name="homeHealthNotes"
-                  placeholder="Optional, but it helps me prepare for your session"
-                ></textarea>
-
-              </div>
-
-              <div class="form-group">
-
-                <label for="homeHeard">
-                  How did you hear about Kidman Health?
-                </label>
-
-                <select id="homeHeard" name="homeHeard">
-
-                  <option value="Google search">Google search</option>
-                  <option value="Instagram">Instagram</option>
-                  <option value="Referral from friend/family">Referral from friend/family</option>
-                  <option value="Flyer or poster">Flyer or poster</option>
-                  <option value="GP or health professional">GP or health professional</option>
-                  <option value="Aged care provider">Aged care provider</option>
-                  <option value="Other">Other</option>
-
-                </select>
-
-              </div>
-
-              <div class="form-group">
-
-                <label for="homeMessage">
-                  Anything else?
-                </label>
-
-                <textarea
-                  id="homeMessage"
-                  name="homeMessage"
-                  placeholder="Any other details or questions"
-                ></textarea>
-
-              </div>
-
-            </div>
-
-
-            <!-- ===============================================
-                 CARE PROVIDER REFERRAL
-            ================================================ -->
-
-            <div class="field-group" data-branch="provider" hidden>
-
-              <div class="form-row">
-
-                <div class="form-group">
-
-                  <label for="providerOrg">
-                    Organisation name
-                  </label>
-
-                  <input
-                    type="text"
-                    id="providerOrg"
-                    name="providerOrg"
-                    placeholder="e.g. Uniting AgeWell"
-                  >
-
-                </div>
-
-                <div class="form-group">
-
-                  <label for="providerRole">
-                    Your role
-                  </label>
-
-                  <input
-                    type="text"
-                    id="providerRole"
-                    name="providerRole"
-                    placeholder="e.g. Care Coordinator"
-                  >
-
-                </div>
-
-              </div>
-
-              <div class="form-row">
-
-                <div class="form-group">
-
-                  <label for="clientName">
-                    Client name
-                  </label>
-
-                  <input
-                    type="text"
-                    id="clientName"
-                    name="clientName"
-                    placeholder="Client's full name"
-                  >
-
-                </div>
-
-                <div class="form-group">
-
-                  <label for="clientSuburb">
-                    Client suburb
-                  </label>
-
-                  <input
-                    type="text"
-                    id="clientSuburb"
-                    name="clientSuburb"
-                    placeholder="e.g. Preston"
-                  >
-
-                </div>
-
-              </div>
-
-              <div class="form-row">
-
-                <div class="form-group">
-
-                  <label for="fundingStream">
-                    Funding stream
-                  </label>
-
-                  <select id="fundingStream" name="fundingStream">
-
-                    <option value="Support at Home">Support at Home</option>
-                    <option value="CHSP">Commonwealth Home Support Programme (CHSP)</option>
-                    <option value="Private / self-funded">Private / self-funded</option>
-                    <option value="Not sure">Not sure</option>
-
-                  </select>
-
-                </div>
-
-                <div class="form-group">
-
-                  <label for="visitFrequency">
-                    Preferred visit frequency
-                  </label>
-
-                  <select id="visitFrequency" name="visitFrequency">
-
-                    <option value="Clinician directed">Clinician directed</option>
-                    <option value="Weekly">Weekly</option>
-                    <option value="Fortnightly">Fortnightly</option>
-                    <option value="Single assessment">Single assessment</option>
-
-                  </select>
-
-                </div>
-
-              </div>
-
-              <div class="form-group">
-
-                <label for="referralReason">
-                  Reason for referral
-                </label>
-
-                <textarea
-                  id="referralReason"
-                  name="referralReason"
-                  placeholder="e.g. pain management, mobility support, general condition maintenance"
-                ></textarea>
-
-              </div>
-
-              <div class="form-row">
-
-                <div class="form-group">
-
-                  <label for="preferredStartDate">
-                    Preferred start date
-                  </label>
-
-                  <input
-                    type="date"
-                    id="preferredStartDate"
-                    name="preferredStartDate"
-                  >
-
-                </div>
-
-                <div class="form-group">
-
-                  <label for="accessNotes">
-                    Mobility / access notes
-                  </label>
-
-                  <input
-                    type="text"
-                    id="accessNotes"
-                    name="accessNotes"
-                    placeholder="e.g. uses a walker, stairs at entrance"
-                  >
-
-                </div>
-
-              </div>
-
-              <div class="form-group form-checkbox">
-
-                <label>
-
-                  <input
-                    type="checkbox"
-                    id="providerConsent"
-                    name="providerConsent"
-                  >
-
-                  I confirm appropriate consent is in place to share
-                  this client's details for the purpose of this referral.
-
-                </label>
-
-              </div>
-
-              <p class="form-note form-note-privacy">
-                Please avoid including detailed medical history here —
-                I'll follow up directly by phone to discuss clinical
-                details securely.
-              </p>
-
-            </div>
-
-
-            <button
-              type="submit"
-              class="btn btn-primary"
-              style="width:100%;"
-            >
-              Send Enquiry →
-            </button>
-
-            <p class="form-note">
-              Your email application will open with your enquiry
-              ready to send. No information is stored on this website.
+            <p class="form-note form-note-privacy">
+              Please avoid including detailed medical history here —
+              I'll follow up directly by phone to discuss clinical
+              details securely.
             </p>
 
-          </form>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
+          </div>
 
 
-  <!-- =======================================================
-       FOOTER
-  ======================================================== -->
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            Send Enquiry →
+          </button>
 
-  <footer>
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-
-          <h3>
-            Kidman Health
-          </h3>
-
-          <p>
-            Mobile remedial massage therapy delivered to your
-            home across Melbourne.
+          <p class="form-note">
+            Your email application will open with your enquiry
+            ready to send. No information is stored on this website.
           </p>
 
-        </div>
-
-
-        <div>
-
-          <h3>
-            Explore
-          </h3>
-
-          <ul class="footer-links">
-
-            <li>
-              <a href="#about">About</a>
-            </li>
-
-            <li>
-              <a href="#services">Services</a>
-            </li>
-<li><a href="/services.html">All services</a></li>
-<li><a href="/conditions.html">Conditions</a></li>
-            <li>
-              <a href="#providers">For Providers</a>
-            </li>
-
-            <li>
-              <a href="#faq">FAQ</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div>
-
-          <h3>
-            Contact
-          </h3>
-
-          <ul class="footer-links">
-
-            <li>
-              <a href="#contact">Make an enquiry</a>
-            </li>
-
-            <li>
-              <a href="https://kidmanhealth.com">
-                kidmanhealth.com
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-
-      <div class="copyright">
-
-        <span>
-          © <span id="year"></span> Kidman Health. All rights reserved.
-        </span>
-
-        <span>
-          Mobile Remedial Massage Therapy · Melbourne
-        </span>
+        </form>
 
       </div>
 
     </div>
+  </section>
 
-  </footer>
-
-
-  <!-- =======================================================
-       JAVASCRIPT
-  ======================================================== -->
-
-  <script>
-
-    /* -------------------------------------------------------
-       MOBILE MENU
-    ------------------------------------------------------- */
-
-    const mobileMenu = document.getElementById("mobileMenu");
-    const navLinks = document.getElementById("navLinks");
-
-    mobileMenu.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
+</main>
 
 
-    /* Close mobile menu after clicking a link */
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+<footer>
+  <div class="container">
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
+    <div class="footer-grid">
 
-      link.addEventListener("click", () => {
+      <div>
+        <h3>Kidman Health</h3>
+        <p>Mobile remedial massage therapy delivered to your home across Melbourne.</p>
+      </div>
 
-        navLinks.classList.remove("active");
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="/services.html">All services</a></li>
+          <li><a href="/conditions.html">Conditions</a></li>
+          <li><a href="#providers">For Providers</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
 
-      });
+      <div>
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="#contact">Make an enquiry</a></li>
+          <li><a href="https://kidmanhealth.com">kidmanhealth.com</a></li>
+        </ul>
+      </div>
 
-    });
+    </div>
 
+    <div class="copyright">
+      <span>© <span id="year"></span> Kidman Health. All rights reserved.</span>
+      <span>Mobile Remedial Massage Therapy · Melbourne</span>
+    </div>
 
-    /* -------------------------------------------------------
-       FAQ ACCORDION
-    ------------------------------------------------------- */
-
-    document.querySelectorAll(".faq-question").forEach(button => {
-
-      button.addEventListener("click", () => {
-
-        const item = button.parentElement;
-
-        const answer = item.querySelector(".faq-answer");
-
-        const currentlyActive =
-          document.querySelector(".faq-item.active");
-
-        if (currentlyActive && currentlyActive !== item) {
-
-          currentlyActive.classList.remove("active");
-
-          currentlyActive.querySelector(".faq-answer").style.maxHeight = null;
-
-        }
-
-        item.classList.toggle("active");
-
-        if (item.classList.contains("active")) {
-
-          answer.style.maxHeight = answer.scrollHeight + "px";
-
-        } else {
-
-          answer.style.maxHeight = null;
-
-        }
-
-      });
-
-    });
+  </div>
+</footer>
 
 
-    /* -------------------------------------------------------
-       CONTACT FORM
-    ------------------------------------------------------- */
+<!-- =======================================================
+     JAVASCRIPT
+======================================================== -->
+<script>
 
-    /*
-      IMPORTANT:
+/* -------------------------------------------------------
+   MOBILE MENU + HEADER STATE
+------------------------------------------------------- */
+const mobileMenu = document.getElementById("mobileMenu");
+const navLinks = document.getElementById("navLinks");
+const siteHeader = document.getElementById("siteHeader");
 
-      Replace the email address below with your real
-      Kidman Health email address.
+mobileMenu.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("is-open");
+  mobileMenu.setAttribute("aria-expanded", open ? "true" : "false");
+});
 
-      This version is completely free and doesn't require
-      a database or paid form service.
+document.querySelectorAll(".kh-nav__links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("is-open");
+    mobileMenu.setAttribute("aria-expanded", "false");
+  });
+});
 
-      When someone submits the form, their email program
-      opens with the enquiry prepared.
-    */
+function updateHeader() {
+  siteHeader.classList.toggle("is-scrolled", window.scrollY > 40);
+}
+window.addEventListener("scroll", updateHeader, { passive: true });
+updateHeader();
 
-    const BUSINESS_EMAIL = "jake@kidmanhealth.com";
 
+/* -------------------------------------------------------
+   FAQ ACCORDION
+------------------------------------------------------- */
+document.querySelectorAll(".faq-question").forEach(button => {
 
-    /* -------------------------------------------------------
-       SHOW/HIDE FIELDS BASED ON ENQUIRY TYPE
-    ------------------------------------------------------- */
+  button.addEventListener("click", () => {
 
-    const enquiryRadios =
-      document.querySelectorAll('input[name="enquiryType"]');
+    const item = button.parentElement;
+    const answer = item.querySelector(".faq-answer");
+    const currentlyActive = document.querySelector(".faq-item.active");
 
-    const fieldGroups =
-      document.querySelectorAll(".field-group");
-
-    function updateVisibleFields() {
-
-      const selected =
-        document.querySelector('input[name="enquiryType"]:checked').value;
-
-      fieldGroups.forEach(group => {
-
-        group.hidden = group.dataset.branch !== selected;
-
-      });
-
+    if (currentlyActive && currentlyActive !== item) {
+      currentlyActive.classList.remove("active");
+      currentlyActive.querySelector(".faq-answer").style.maxHeight = null;
+      currentlyActive.querySelector(".faq-question").setAttribute("aria-expanded", "false");
     }
 
-    enquiryRadios.forEach(radio => {
+    item.classList.toggle("active");
 
-      radio.addEventListener("change", updateVisibleFields);
+    if (item.classList.contains("active")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      button.setAttribute("aria-expanded", "true");
+    } else {
+      answer.style.maxHeight = null;
+      button.setAttribute("aria-expanded", "false");
+    }
 
-    });
+  });
 
-    updateVisibleFields();
+});
 
 
-    /* -------------------------------------------------------
-       BUILD AND SEND THE ENQUIRY EMAIL
-    ------------------------------------------------------- */
+/* -------------------------------------------------------
+   CONTACT FORM
+   Opens the visitor's email app with the enquiry prepared.
+------------------------------------------------------- */
+const BUSINESS_EMAIL = "jake@kidmanhealth.com";
 
-    document.getElementById("contactForm").addEventListener(
-      "submit",
-      function(event) {
+const enquiryRadios = document.querySelectorAll('input[name="enquiryType"]');
+const fieldGroups = document.querySelectorAll(".field-group");
 
-        event.preventDefault();
+function updateVisibleFields() {
+  const selected = document.querySelector('input[name="enquiryType"]:checked').value;
+  fieldGroups.forEach(group => {
+    group.hidden = group.dataset.branch !== selected;
+  });
+}
 
-        const enquiryType =
-          document.querySelector('input[name="enquiryType"]:checked').value;
+enquiryRadios.forEach(radio => {
+  radio.addEventListener("change", updateVisibleFields);
+});
 
-        const name = document.getElementById("name").value;
-        const phone = document.getElementById("phone").value;
-        const email = document.getElementById("email").value;
+updateVisibleFields();
 
-        let enquiryLabel = "General Enquiry";
-        let details = "";
+document.getElementById("contactForm").addEventListener("submit", function(event) {
 
-        if (enquiryType === "general") {
+  event.preventDefault();
 
-          enquiryLabel = "General Enquiry";
+  const enquiryType = document.querySelector('input[name="enquiryType"]:checked').value;
 
-          const message =
-            document.getElementById("generalMessage").value;
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
 
-          details =
+  let enquiryLabel = "General Enquiry";
+  let details = "";
+
+  if (enquiryType === "general") {
+
+    enquiryLabel = "General Enquiry";
+
+    const message = document.getElementById("generalMessage").value;
+
+    details =
 `Message:
 ${message}`;
 
-        } else if (enquiryType === "home") {
+  } else if (enquiryType === "home") {
 
-          enquiryLabel = "Home Appointment Booking";
+    enquiryLabel = "Home Appointment Booking";
 
-          const suburb = document.getElementById("homeSuburb").value;
-          const preferredTime = document.getElementById("homePreferredTime").value;
-          const reason = document.getElementById("homeReason").value;
-          const healthNotes = document.getElementById("homeHealthNotes").value;
-          const heardAbout = document.getElementById("homeHeard").value;
-          const message = document.getElementById("homeMessage").value;
+    const suburb = document.getElementById("homeSuburb").value;
+    const preferredTime = document.getElementById("homePreferredTime").value;
+    const reason = document.getElementById("homeReason").value;
+    const healthNotes = document.getElementById("homeHealthNotes").value;
+    const heardAbout = document.getElementById("homeHeard").value;
+    const message = document.getElementById("homeMessage").value;
 
-          details =
+    details =
 `Suburb: ${suburb}
 Preferred day/time: ${preferredTime}
 Reason for appointment: ${reason}
@@ -2825,25 +1521,22 @@ How they heard about us: ${heardAbout}
 Additional details:
 ${message}`;
 
-        } else if (enquiryType === "provider") {
+  } else if (enquiryType === "provider") {
 
-          enquiryLabel = "Care Provider Referral";
+    enquiryLabel = "Care Provider Referral";
 
-          const org = document.getElementById("providerOrg").value;
-          const role = document.getElementById("providerRole").value;
-          const clientName = document.getElementById("clientName").value;
-          const clientSuburb = document.getElementById("clientSuburb").value;
-          const funding = document.getElementById("fundingStream").value;
-          const frequency = document.getElementById("visitFrequency").value;
-          const reason = document.getElementById("referralReason").value;
-          const startDate = document.getElementById("preferredStartDate").value;
-          const accessNotes = document.getElementById("accessNotes").value;
-          const consent =
-            document.getElementById("providerConsent").checked
-              ? "Yes"
-              : "Not confirmed";
+    const org = document.getElementById("providerOrg").value;
+    const role = document.getElementById("providerRole").value;
+    const clientName = document.getElementById("clientName").value;
+    const clientSuburb = document.getElementById("clientSuburb").value;
+    const funding = document.getElementById("fundingStream").value;
+    const frequency = document.getElementById("visitFrequency").value;
+    const reason = document.getElementById("referralReason").value;
+    const startDate = document.getElementById("preferredStartDate").value;
+    const accessNotes = document.getElementById("accessNotes").value;
+    const consent = document.getElementById("providerConsent").checked ? "Yes" : "Not confirmed";
 
-          details =
+    details =
 `Organisation: ${org}
 Referrer role: ${role}
 
@@ -2859,17 +1552,11 @@ ${reason}
 
 Consent to share client details confirmed: ${consent}`;
 
-        }
+  }
 
+  const subject = encodeURIComponent("Kidman Health Enquiry – " + enquiryLabel);
 
-        const subject =
-          encodeURIComponent(
-            "Kidman Health Enquiry – " + enquiryLabel
-          );
-
-
-        const body =
-          encodeURIComponent(
+  const body = encodeURIComponent(
 `Hi Jake,
 
 I have an enquiry regarding Kidman Health.
@@ -2883,47 +1570,151 @@ Email: ${email}
 ${details}
 
 Thanks.`
-          );
+  );
+
+  window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
+
+});
 
 
-        window.location.href =
-          `mailto:${BUSINESS_EMAIL}?subject=${subject}&body=${body}`;
-
-      }
-    );
-
-
-    /* -------------------------------------------------------
-       CURRENT YEAR
-    ------------------------------------------------------- */
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-  </script>
+/* -------------------------------------------------------
+   CURRENT YEAR
+------------------------------------------------------- */
+document.getElementById("year").textContent = new Date().getFullYear();
 
 
-  <!-- =======================================================
-       STRUCTURED DATA / SEO
-  ======================================================== -->
+/* -------------------------------------------------------
+   HERO SHADER (slow-moving light; falls back to the CSS gradient)
+------------------------------------------------------- */
+(function () {
+  const canvas = document.querySelector(".kh-hero__canvas");
+  if (!canvas) return;
 
-  <script type="application/ld+json">
+  const gl = canvas.getContext("webgl", { antialias: false, alpha: false, powerPreference: "low-power" });
+  if (!gl) return;
 
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Kidman Health",
-    "url": "https://kidmanhealth.com",
-    "description": "Mobile remedial massage therapy in Melbourne.",
-    "areaServed": {
-      "@type": "City",
-      "name": "Melbourne"
-    },
-    "medicalSpecialty": "Massage Therapy"
+  const vs = "attribute vec2 p; void main(){ gl_Position = vec4(p, 0.0, 1.0); }";
+  const fs = [
+    "precision mediump float;",
+    "uniform vec2 u_res; uniform float u_time;",
+    "float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }",
+    "float noise(vec2 p){ vec2 i = floor(p), f = fract(p); f = f*f*(3.0-2.0*f);",
+    "  return mix(mix(hash(i), hash(i+vec2(1.0,0.0)), f.x), mix(hash(i+vec2(0.0,1.0)), hash(i+vec2(1.0,1.0)), f.x), f.y); }",
+    "float fbm(vec2 p){ float v = 0.0, a = 0.5; for(int i = 0; i < 4; i++){ v += a * noise(p); p *= 2.02; a *= 0.5; } return v; }",
+    "void main(){",
+    "  vec2 uv = gl_FragCoord.xy / u_res;",
+    "  vec2 p = uv * vec2(u_res.x / u_res.y, 1.0) * 1.7;",
+    "  float t = u_time * 0.04;",
+    "  vec2 q = vec2(fbm(p + t), fbm(p + vec2(5.2, 1.3) - t));",
+    "  vec2 r = vec2(fbm(p + 3.0*q + vec2(1.7, 9.2) + t*1.5), fbm(p + 3.0*q + vec2(8.3, 2.8) - t*1.2));",
+    "  float f = fbm(p + 3.0*r);",
+    "  vec3 deep  = vec3(0.075, 0.125, 0.098);",
+    "  vec3 sage  = vec3(0.302, 0.459, 0.392);",
+    "  vec3 cream = vec3(0.957, 0.945, 0.922);",
+    "  vec3 col = mix(deep, sage, smoothstep(0.25, 0.85, f));",
+    "  col = mix(col, cream, smoothstep(0.68, 1.0, f) * 0.22);",
+    "  col = mix(col, deep, smoothstep(1.0, 0.0, uv.x) * 0.3);",
+    "  gl_FragColor = vec4(col, 1.0);",
+    "}"
+  ].join("\n");
+
+  function compile(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null;
   }
 
-  </script>
+  const v = compile(gl.VERTEX_SHADER, vs);
+  const f = compile(gl.FRAGMENT_SHADER, fs);
+  if (!v || !f) return;
 
+  const prog = gl.createProgram();
+  gl.attachShader(prog, v);
+  gl.attachShader(prog, f);
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
+  gl.useProgram(prog);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, "p");
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+  const uRes = gl.getUniformLocation(prog, "u_res");
+  const uTime = gl.getUniformLocation(prog, "u_time");
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let visible = true;
+  let raf = 0;
+  const start = performance.now();
+
+  function resize() {
+    const scale = Math.min(window.devicePixelRatio || 1, 1.5) * 0.5;
+    const w = Math.max(2, Math.round(canvas.clientWidth * scale));
+    const h = Math.max(2, Math.round(canvas.clientHeight * scale));
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w;
+      canvas.height = h;
+      gl.viewport(0, 0, w, h);
+    }
+  }
+
+  function draw(time) {
+    resize();
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uTime, time);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  }
+
+  function loop(now) {
+    if (!visible || document.hidden || reduce.matches) { raf = 0; return; }
+    draw((now - start) / 1000 + 12);
+    raf = requestAnimationFrame(loop);
+  }
+
+  function kick() { if (!raf) raf = requestAnimationFrame(loop); }
+
+  draw(12);
+  canvas.classList.add("is-ready");
+
+  if (!reduce.matches) kick();
+  if (reduce.addEventListener) {
+    reduce.addEventListener("change", () => { reduce.matches ? draw(12) : kick(); });
+  }
+  document.addEventListener("visibilitychange", kick);
+  window.addEventListener("resize", () => draw((performance.now() - start) / 1000 + 12));
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
+      if (visible) kick();
+    }).observe(canvas);
+  }
+})();
+
+</script>
+
+
+<!-- =======================================================
+     STRUCTURED DATA / SEO
+======================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Kidman Health",
+  "url": "https://kidmanhealth.com",
+  "description": "Mobile remedial massage therapy in Melbourne.",
+  "areaServed": {
+    "@type": "City",
+    "name": "Melbourne"
+  },
+  "medicalSpecialty": "Massage Therapy"
+}
+</script>
 
 </body>
 </html>
